@@ -1,5 +1,5 @@
 ---
-language: bash
+# language: bash
 language: python
 python:
   - "2.7"
