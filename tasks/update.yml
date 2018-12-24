@@ -12,5 +12,5 @@
 - name: Update the system.
   command: dnf distro-sync -y
   register: command
-  changed_when: "'No Packages marked for Distribution Synchronization' not in command.stdout'"
+  changed_when: "'No Packages marked for Distribution Synchronization' not in command.stdout"
 #   when_"{{ pkg }}"" state == latest
