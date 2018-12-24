@@ -5,13 +5,13 @@
     name: "{{ pkg }}"
     state: latest
 
-# - name: Update the system.
-#   dnf:
-#     name: "*"
-#     state: latest
-
 - name: Update the system.
-  become: true
-  command: dnf distro-sync -y
-  register: command
-  changed_when: "'No Packages marked for Distribution Synchronization' not in command.stdout"
+  dnf:
+    name: "*"
+    state: latest
+
+# - name: Update the system.
+#   become: true
+#   command: dnf distro-sync -y
+#   register: command
+#   changed_when: "'No Packages marked for Distribution Synchronization' not in command.stdout"
