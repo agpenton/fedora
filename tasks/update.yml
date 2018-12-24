@@ -1,5 +1,6 @@
 ---
 - name: Enabling extra Repositories
+  become: true
   dnf:
     name: "{{ pkg }}"
     state: latest
@@ -10,6 +11,7 @@
 #     state: latest
 
 - name: Update the system.
+  become: true
   command: dnf distro-sync -y
   register: command
   changed_when: "'No Packages marked for Distribution Synchronization' not in command.stdout"
