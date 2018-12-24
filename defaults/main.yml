@@ -1,3 +1,10 @@
 ---
 # defaults file for fedora
 pkg: fedora-workstation-repositories
+essential_pkg:
+  - htop
+  - vim
+  - less
+  - python
+  - python-devel
+  - python-pip
