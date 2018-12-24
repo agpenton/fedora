@@ -1,0 +1,5 @@
+---
+- name: Installing Essentials packages.
+  dnf:
+    name: "{{ essential_pkg }}"
+    state: latest
