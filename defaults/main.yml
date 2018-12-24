@@ -2,6 +2,11 @@
 # defaults file for fedora
 pkg: fedora-workstation-repositories
 
+python_pkg:
+  - python2
+  - python2-dnf
+  - libselinux-python
+
 essential_pkg:
   - htop
   - vim

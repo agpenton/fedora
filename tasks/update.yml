@@ -4,6 +4,8 @@
   dnf:
     name: "{{ pkg }}"
     state: latest
+- name: installing python and deps for ansible modules.
+  raw: dnf install -y python2 python2-dnf libselinux-python
 
 - name: Update the system.
   become: true
