@@ -6,9 +6,15 @@
     state: latest
 
 - name: Update the system.
+  become: true
   dnf:
     name: "*"
     state: latest
+
+- name: Autoremove unneeded packages installed as dependencies.
+  become: true
+  dnf:
+    autoremove: yes
 
 # - name: Update the system.
 #   become: true
