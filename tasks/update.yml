@@ -1,10 +1,14 @@
 ---
 - name: Enabling extra Repositories
   dnf:
-    name: fedora-workstation-repositories
+    name: "{{ pkg }}"
     state: latest
 
+# - name: Update the system.
+#   dnf:
+#     name: "*"
+#     state: latest
+
 - name: Update the system.
-  dnf:
-    name: "*"
-    state: latest
+  command: dnf distro-sync -y
+#   when_"{{ pkg }}"" state == latest
