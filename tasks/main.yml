@@ -1,2 +1,5 @@
 ---
 # tasks file for fedora
+- name: Provisioning the Workstation.
+  become: true
+  - include_tasks: update.yml
